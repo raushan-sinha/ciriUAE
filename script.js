@@ -104,3 +104,17 @@ document.querySelector('#resources-contactBn').addEventListener('click', (e) => 
   e.preventDefault();
   window.open('contact.html', '_self');
 });
+
+
+//todo: Industries More Info Button -
+document.querySelector('#industries-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('industries.html', '_self');
+});
+
+
+//todo: case studies More Info Button -
+document.querySelector('#case-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('caseStudies.html', '_self');
+});
