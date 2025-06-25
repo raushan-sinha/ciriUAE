@@ -118,3 +118,12 @@ document.querySelector('#case-infoBtn').addEventListener('click', (e) => {
   e.preventDefault();
   window.open('caseStudies.html', '_self');
 });
+
+
+//todo: Blog More Info Button -
+document.querySelector('#blog-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('blog.html', '_self');
+});
+
+
