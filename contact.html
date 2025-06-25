@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CiriUAE</title>
+    <link rel="shortcut icon" href="Images/ciriuae-logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="Images/ciriuae-logo.webp" alt="CiriUAE-logo" class="logo">
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <h2>Let's Get Started</h2>
+                <p>Take the first step, and contact us to discuss your marketing and business goals. Send us a message,
+                    and we will get back to you soon.</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="whatsapp-section">
+                        <h3>Message us on WhatsApp</h3>
+                    </div>
+
+                    <div class="company-details">
+                        <h3>CIRI UAE</h3>
+                        <div class="detail-item">
+                            <strong>Address:</strong>
+                            <span>Free Zone - Ajman - United Arab Emirates</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Phone:</strong>
+                            <span>0971524308085</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Email:</strong>
+                            <span>INQUIRY@CIRIUAE.COM</span>
+                        </div>
+                    </div>
+
+                    <div class="hours-section">
+                        <h4>Hours</h4>
+                        <p><strong>Open today</strong></p>
+                        <p>09:00 am – 05:00 pm</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Get an Estimate</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"
+                                placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Attach Files</label>
+                            <div class="file-upload">
+                                <input type="file" id="files" name="files" multiple>
+                                <label for="files" class="file-upload-label">
+                                    Click to attach files or drag and drop<br>
+                                    <small>Attachments (0)</small>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="recaptcha-notice">
+                            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service
+                            apply.
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="reset" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Presence Section -->
+    <section class="regional-section">
+        <div class="container">
+            <div class="regional-header">
+                <h2>Our Regional Presence</h2>
+            </div>
+
+            <div class="regional-grid">
+                <div class="regional-card">
+                    <h3>United Arab Emirates</h3>
+                    <p>We're based in the UAE and serve clients across the region.</p>
+                </div>
+
+                <div class="regional-card">
+                    <h3>Middle East</h3>
+                    <p>We have a strong presence in the Middle East.</p>
+                </div>
+
+                <div class="regional-card">
+                    <h3>North Africa</h3>
+                    <p>We have a strong presence in North Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+</body>
+
+</html>
