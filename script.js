@@ -71,8 +71,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
 //todo: Get in touch Button -
 document.querySelector('.cta-button').addEventListener('click', (e) => {
   e.preventDefault();
   window.open('contact.html', '_self');
-})
+});
+
+//todo: About More Info Button -
+document.querySelector('#about-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('about.html', '_self');
+});
+
+
+//todo: Services More Info Button -
+document.querySelector('#services-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('services.html', '_self');
+});
+
+
+//todo: Contact More Info Button -
+document.querySelector('#contact-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('contact.html', '_self');
+});
+
+
+//todo: Resources Contact More Info Button -
+document.querySelector('#resources-contactBn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('contact.html', '_self');
+});

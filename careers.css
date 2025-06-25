@@ -7,7 +7,7 @@ body {
   
   /* Navbar Styles */
   .navbar {
-    background-color: black;
+    background-color: navy;
     color: white;
     padding: 0 2rem;
     position: fixed;
@@ -120,13 +120,12 @@ body {
     top: 70px;
     left: 0;
     right: 0;
-    background-color: black;
+    background-color: navy;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
     border-radius: 0 0 90% 90%;
     padding: 2rem;
     margin: 0 5%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);/* Add this line - higher than navbar */
   }
   
   .mobile-menu.active {
@@ -218,7 +217,7 @@ body {
   @media screen and (max-height: 500px) and (orientation: landscape) {
     .mobile-menu {
         border-radius: 0 0 50% 50%;
-        padding: 1rem;
+        padding: 4rem;
     }
   
     .mobile-nav-links li {
