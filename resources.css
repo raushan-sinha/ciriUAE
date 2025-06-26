@@ -281,32 +281,6 @@ body {
     animation: heroFadeIn 1.5s ease-out;
 }
 
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: titleSlideDown 1s ease-out 0.3s both;
-}
-
-.hero-image {
-    margin-top: 2rem;
-    animation: imageFloat 1.2s ease-out 0.6s both;
-}
-
-.hero-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    animation: imagePulse 2s ease-in-out infinite alternate;
-}
-
-.hero-img:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-
 /* ===== MAIN CONTENT STYLES ===== */
 .main-content {
     padding: 80px 0;
@@ -437,8 +411,8 @@ body {
 }
 
 .card-icon img {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     transition: all 0.3s ease;
     animation: iconRotate 0.8s ease-out;
 }
@@ -559,8 +533,8 @@ body {
 }
 
 .value-img {
-    width: 100%;
-    height: auto;
+    width: 85%;
+    height: 300px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
