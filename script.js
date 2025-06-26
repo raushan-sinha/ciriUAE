@@ -127,3 +127,27 @@ document.querySelector('#blog-infoBtn').addEventListener('click', (e) => {
 });
 
 
+//todo: Marketing Button
+document.querySelector('#marketing-infoBtn').addEventListener('click', (event) => {
+  event.preventDefault();
+  window.open('marketing.html', '_self');
+});
+
+//todo: Business Development Button
+document.querySelector('#businessDev-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('businessDev.html', '_self');
+});
+
+
+//todo: Financial More Info Button -
+document.querySelector('#financial-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('financial.html', '_self');
+});
+
+//todo: Digital More Info Button -
+document.querySelector('#digital-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('digital.html', '_self');
+});
