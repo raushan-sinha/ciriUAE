@@ -151,3 +151,29 @@ document.querySelector('#digital-infoBtn').addEventListener('click', (e) => {
   e.preventDefault();
   window.open('digital.html', '_self');
 });
+
+
+//todo: Resource button 
+document.querySelector('#resource-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('resources.html', '_self');
+});
+
+
+//todo: News button 
+document.querySelector('#news-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('news.html', '_self');
+});
+
+//todo: FAQs button 
+document.querySelector('#faqs-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('faqs.html', '_self');
+});
+
+//todo: Consultation button 
+document.querySelector('#consultation-infoBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('consult.html', '_self');
+});

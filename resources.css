@@ -1,0 +1,1334 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 80px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: navy;
+    color: white;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Logo Styles */
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-right: 2rem;
+}
+
+.logo:hover {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+/* Underline Animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+    transform-origin: center;
+}
+
+/* Hamburger Animation to Cross */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: navy;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 90% 90%;
+    padding: 2rem;
+    margin: 0 5%;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mobile-nav-links li {
+    margin: 1.5rem 0;
+}
+
+.mobile-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: block;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+
+    .mobile-menu {
+        top: 60px;
+        margin: 0 2%;
+        z-index: 1001;
+        /* Ensure this is also set in media query */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .mobile-menu {
+        margin: 0 1%;
+        padding: 1.5rem;
+    }
+
+    .mobile-nav-links a {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .mobile-menu {
+        border-radius: 0 0 50% 50%;
+        padding: 4rem;
+    }
+
+    .mobile-nav-links li {
+        margin: 0.8rem 0;
+    }
+
+    .mobile-nav-links a {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1200px) {
+    .nav-container {
+        padding: 0 2rem;
+    }
+
+    .nav-links {
+        gap: 3rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .nav-links {
+        top: 60px;
+    }
+}
+
+/* ===== HERO SECTION STYLES WITH ANIMATIONS ===== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.hero-content {
+    text-align: center;
+    animation: heroFadeIn 1.5s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: titleSlideDown 1s ease-out 0.3s both;
+}
+
+.hero-image {
+    margin-top: 2rem;
+    animation: imageFloat 1.2s ease-out 0.6s both;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    animation: imagePulse 2s ease-in-out infinite alternate;
+}
+
+.hero-img:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+.main-content {
+    padding: 80px 0;
+}
+
+/* ===== SECTION STYLES WITH ANIMATIONS ===== */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    position: relative;
+    animation: sectionTitleFade 1s ease-out;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+    animation: underlineExpand 1s ease-out 0.5s both;
+}
+
+/* ===== INTRODUCTION SECTION STYLES WITH ANIMATIONS ===== */
+.intro-section {
+    margin-bottom: 80px;
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #555;
+    opacity: 0;
+    animation: textReveal 0.8s ease-out forwards;
+}
+
+.intro-text:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.intro-text:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* ===== RESOURCES GRID STYLES WITH STAGGERED ANIMATIONS ===== */
+.resources-section {
+    margin-bottom: 80px;
+    animation: fadeInUp 1s ease-out 1.2s both;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.resource-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+}
+
+/* Staggered animation delays for cards */
+.card-1 {
+    animation: cardSlideIn 0.8s ease-out 1.4s both;
+}
+
+.card-2 {
+    animation: cardSlideIn 0.8s ease-out 1.6s both;
+}
+
+.card-3 {
+    animation: cardSlideIn 0.8s ease-out 1.8s both;
+}
+
+.card-4 {
+    animation: cardSlideIn 0.8s ease-out 2.0s both;
+}
+
+.card-5 {
+    animation: cardSlideIn 0.8s ease-out 2.2s both;
+}
+
+.resource-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.resource-card:hover .card-overlay {
+    left: 100%;
+}
+
+.card-icon {
+    margin-bottom: 1.5rem;
+    animation: iconBounce 0.6s ease-out;
+}
+
+.card-icon img {
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+    animation: iconRotate 0.8s ease-out;
+}
+
+.resource-card:hover .card-icon img {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    animation: titleSlideUp 0.6s ease-out 0.2s both;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.6;
+    animation: descriptionFade 0.6s ease-out 0.4s both;
+}
+
+/* ===== VALUE PROPOSITION SECTION STYLES WITH ANIMATIONS ===== */
+.value-section {
+    background: #f8f9fa;
+    padding: 80px 0;
+    margin: 80px 0;
+    border-radius: 20px;
+    animation: sectionSlideIn 1s ease-out 2.5s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    animation: backgroundPulse 4s ease-in-out infinite;
+}
+
+.value-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.value-text {
+    flex: 1;
+    animation: slideInLeft 1s ease-out 2.8s both;
+}
+
+.value-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefit-item {
+    padding: 0.8rem 0;
+    position: relative;
+    padding-left: 2rem;
+    color: #333;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* Staggered animation for benefit items */
+.benefit-1 {
+    animation: benefitSlideIn 0.6s ease-out 3.0s both;
+}
+
+.benefit-2 {
+    animation: benefitSlideIn 0.6s ease-out 3.2s both;
+}
+
+.benefit-3 {
+    animation: benefitSlideIn 0.6s ease-out 3.4s both;
+}
+
+.benefit-4 {
+    animation: benefitSlideIn 0.6s ease-out 3.6s both;
+}
+
+.benefit-5 {
+    animation: benefitSlideIn 0.6s ease-out 3.8s both;
+}
+
+.benefit-item::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: checkmarkPop 0.4s ease-out;
+}
+
+.benefit-item:hover {
+    color: #007bff;
+    transform: translateX(10px);
+}
+
+.value-image {
+    flex: 1;
+    animation: slideInRight 1s ease-out 2.8s both;
+}
+
+.value-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: imageFloat 3s ease-in-out infinite;
+}
+
+.value-img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* ===== CALL TO ACTION SECTION STYLES WITH ANIMATIONS ===== */
+.cta-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    border-radius: 20px;
+    text-align: center;
+    animation: ctaSlideUp 1s ease-out 4.0s both;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    animation: patternMove 20s linear infinite;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    animation: ctaTitleBounce 0.8s ease-out 4.2s both;
+}
+
+.cta-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: ctaDescriptionFade 0.8s ease-out 4.4s both;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: ctaButtonsSlide 0.8s ease-out 4.6s both;
+}
+
+/* ===== BUTTON STYLES WITH ANIMATIONS ===== */
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #667eea;
+    animation: buttonPulse 2s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #667eea;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ===== FOOTER STYLES WITH ANIMATIONS ===== */
+.footer {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px 20px;
+    animation: footerSlideUp 1s ease-out 4.8s both;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.footer-col-1 {
+    animation: footerColFade 0.6s ease-out 5.0s both;
+}
+
+.footer-col-2 {
+    animation: footerColFade 0.6s ease-out 5.2s both;
+}
+
+.footer-col-3 {
+    animation: footerColFade 0.6s ease-out 5.4s both;
+}
+
+.footer-col-4 {
+    animation: footerColFade 0.6s ease-out 5.6s both;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.footer-text {
+    line-height: 1.6;
+    color: #bdc3c7;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    line-height: 2;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #3498db;
+    transform: translateX(5px);
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    border-top: 1px solid #34495e;
+    padding-top: 2rem;
+    text-align: center;
+    color: #95a5a6;
+    animation: footerBottomFade 0.6s ease-out 5.8s both;
+}
+
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imageFloat {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes imagePulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes sectionTitleFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes underlineExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes iconBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes iconRotate {
+    from {
+        transform: rotate(-10deg) scale(0.8);
+    }
+
+    to {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes titleSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes descriptionFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sectionSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes backgroundPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(180deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes benefitSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes checkmarkPop {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ctaSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes patternMove {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        transform: translateX(100px) translateY(100px);
+    }
+}
+
+@keyframes ctaTitleBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ctaDescriptionFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ctaButtonsSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes footerSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes footerColFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes footerBottomFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN - TABLET STYLES ===== */
+@media (max-width: 768px) {
+
+    /* Hero section adjustments */
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* Section title adjustments */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Resources grid adjustments */
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Value section adjustments */
+    .value-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* CTA buttons adjustments */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ===== RESPONSIVE DESIGN - MOBILE STYLES ===== */
+@media (max-width: 480px) {
+
+    /* Container padding adjustments */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero section mobile adjustments */
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    /* Main content padding adjustments */
+    .main-content {
+        padding: 40px 0;
+    }
+
+    /* Section spacing adjustments */
+    .intro-section,
+    .resources-section {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Card padding adjustments */
+    .resource-card {
+        padding: 1.5rem;
+    }
+
+    /* Value section adjustments */
+    .value-section {
+        padding: 40px 0;
+        margin: 40px 0;
+    }
+
+    /* CTA section adjustments */
+    .cta-section {
+        padding: 40px 0;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+
+    .cta-description {
+        font-size: 1rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 40px 0 20px;
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION STYLES ===== */
+@media (orientation: landscape) and (max-height: 600px) {
+
+    /* Reduce hero section height in landscape */
+    .hero {
+        padding: 40px 0 30px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Adjust section spacing */
+    .main-content {
+        padding: 30px 0;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    /* Reduce card padding */
+    .resource-card {
+        padding: 1.5rem;
+    }
+
+    /* Adjust value section */
+    .value-section {
+        padding: 30px 0;
+    }
+
+    /* Adjust CTA section */
+    .cta-section {
+        padding: 30px 0;
+    }
+}
+
+/* ===== PORTRAIT ORIENTATION STYLES ===== */
+@media (orientation: portrait) {
+
+    /* Ensure proper spacing in portrait mode */
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-content {
+        flex-direction: column;
+    }
+
+    /* Stack CTA buttons vertically in portrait */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable animations for users who prefer reduced motion */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ===== FOCUS STYLES FOR ACCESSIBILITY ===== */
+.btn:focus,
+.footer-link:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .cta-section,
+    .footer {
+        display: none;
+    }
+
+    .hero {
+        background: none;
+        color: #000;
+    }
+
+    .main-content {
+        padding: 0;
+    }
+
+    .resource-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
