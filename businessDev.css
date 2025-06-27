@@ -292,19 +292,6 @@ body {
   margin-bottom: 2rem;
 }
 
-.hero-image {
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
 .cta-button {
   background: #2563eb;
   color: white;
