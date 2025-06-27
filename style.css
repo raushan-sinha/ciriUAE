@@ -121,13 +121,13 @@ body {
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
-  top: 70px;
+  top: 100px;
   left: 0;
   right: 0;
-  background-color: white;
-  transform: translateY(-100%);
+  background-color: black;
+  transform: translateX(-110%);
   transition: transform 0.3s ease;
-  border-radius: 0 0 90% 90%;
+  border-radius: 15px;
   padding: 2rem;
   margin: 0 5%;
 }
@@ -148,7 +148,7 @@ body {
 }
 
 .mobile-nav-links a {
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 500;
@@ -178,7 +178,7 @@ body {
   }
 
   .nav-container {
-    height: 60px;
+    height: 40px;
   }
 
   .logo {
