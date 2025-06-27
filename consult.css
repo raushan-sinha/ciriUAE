@@ -6,7 +6,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    min-height: 100dvh; /* Dynamic viewport height for mobile */
+    min-height: 100dvh;
+    /* Dynamic viewport height for mobile */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,8 +19,8 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: navy;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 0 2rem;
     position: fixed;
     top: 0;
@@ -65,7 +66,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -75,7 +76,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #ddd;
+    color: #f19292;
 }
 
 /* Underline Animation */
@@ -106,7 +107,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin: 3px 0;
     transition: 0.3s;
     transform-origin: center;
@@ -128,13 +129,13 @@ body {
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
-    top: 70px;
+    top: 100px;
     left: 0;
     right: 0;
-    background-color: navy;
-    transform: translateY(-100%);
+    background-color: black;
+    transform: translateX(-110%);
     transition: transform 0.3s ease;
-    border-radius: 0 0 90% 90%;
+    border-radius: 15px;
     padding: 2rem;
     margin: 0 5%;
 }
@@ -155,7 +156,7 @@ body {
 }
 
 .mobile-nav-links a {
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: 500;
@@ -167,7 +168,7 @@ body {
 
 .mobile-nav-links a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: #ddd;
+    color: #f19292;
 }
 
 /* Responsive Design */
@@ -185,7 +186,7 @@ body {
     }
 
     .nav-container {
-        height: 60px;
+        height: 65px;
     }
 
     .logo {
@@ -472,10 +473,10 @@ body {
     padding: 0 5px;
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:valid + label,
-.form-group textarea:valid + label {
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:valid+label,
+.form-group textarea:valid+label {
     top: -10px;
     left: 10px;
     font-size: 0.85rem;
@@ -543,6 +544,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -556,30 +558,30 @@ body {
         align-items: center;
         justify-content: center;
     }
-    
+
     .container {
         min-height: calc(100vh - 30px);
         min-height: calc(100dvh - 30px);
         align-items: center;
     }
-    
+
     .consultation-card {
         padding: 30px 20px;
         width: 100%;
         max-width: none;
         margin: auto;
     }
-    
+
     .header-section h1 {
         font-size: 1.8rem;
     }
-    
+
     .phone-display {
         flex-direction: column;
         text-align: center;
         gap: 10px;
     }
-    
+
     .phone-details {
         align-items: center;
     }
@@ -589,31 +591,31 @@ body {
     body {
         padding: 10px;
     }
-    
+
     .container {
         min-height: calc(100vh - 20px);
         min-height: calc(100dvh - 20px);
     }
-    
+
     .consultation-card {
         padding: 25px 15px;
         border-radius: 15px;
     }
-    
+
     .header-section h1 {
         font-size: 1.6rem;
     }
-    
+
     .phone-number {
         font-size: 1.2rem;
     }
-    
+
     .form-group input,
     .form-group textarea {
         padding: 12px;
         width: 90%;
     }
-    
+
     .submit-btn {
         padding: 12px 25px;
         font-size: 1rem;
@@ -627,27 +629,27 @@ body {
         align-items: center;
         justify-content: center;
     }
-    
+
     .container {
         min-height: calc(100vh - 20px);
         min-height: calc(100dvh - 20px);
         align-items: center;
     }
-    
+
     .consultation-card {
         padding: 20px;
         max-height: calc(100vh - 40px);
         overflow-y: auto;
     }
-    
+
     .header-section {
         margin-bottom: 20px;
     }
-    
+
     .contact-info {
         margin-bottom: 20px;
     }
-    
+
     .consultation-form {
         gap: 15px;
     }
@@ -658,17 +660,17 @@ body {
     body {
         padding: 8px;
     }
-    
+
     .container {
         min-height: calc(100vh - 16px);
         min-height: calc(100dvh - 16px);
     }
-    
+
     .consultation-card {
         padding: 20px 12px;
         border-radius: 12px;
     }
-    
+
     .header-section h1 {
         font-size: 1.4rem;
     }
@@ -682,7 +684,8 @@ body {
 }
 
 /* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .consultation-card {
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
