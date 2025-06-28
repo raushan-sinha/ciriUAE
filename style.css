@@ -1,9 +1,10 @@
 * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   padding-top: 80px;
@@ -73,7 +74,7 @@ body {
 
 /* Underline Animation */
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -256,7 +257,6 @@ body {
   }
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -333,7 +333,7 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50px;
   height: 4px;
@@ -386,7 +386,7 @@ body {
 }
 
 .value-proposition li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #28a745;
@@ -414,7 +414,7 @@ body {
 }
 
 .services-list li::before {
-  content: '→';
+  content: "→";
   position: absolute;
   left: 1rem;
   color: #2c5aa0;
@@ -814,7 +814,6 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -826,7 +825,6 @@ body {
     opacity: 0;
     transform: translateX(-50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -838,7 +836,6 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
-
   to {
     opacity: 1;
     transform: translateX(0);
@@ -927,7 +924,6 @@ body {
     animation: slideInLeft 1s ease-out;
   }
 
-
   .service-boxes-grid,
   .resource-cta-grid {
     grid-template-columns: 1fr;
@@ -990,7 +986,6 @@ body {
 
 /* Portrait orientation for tablets */
 @media screen and (max-width: 768px) and (orientation: portrait) {
-
   .service-boxes-grid,
   .resource-cta-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -998,7 +993,6 @@ body {
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
-
   .service-boxes-grid,
   .resource-cta-grid {
     grid-template-columns: 1fr;
@@ -1033,7 +1027,7 @@ html {
 .service-box::before,
 .resource-box::before,
 .cta-box::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -1048,9 +1042,6 @@ html {
 .cta-box:hover::before {
   left: 100%;
 }
-
-
-
 
 /* Footer Styles */
 .footer {
@@ -1200,6 +1191,305 @@ html {
   font-size: 0.9rem;
   color: #95a5a6;
   font-style: italic;
+}
+
+/* Contact Widget Styles */
+.contact-widget {
+  position: fixed;
+  bottom: 3px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.contact-main-button {
+  width: 60px;
+  height: 55px;
+  background: linear-gradient(135deg, #2c5aa0, #1e3a8a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(44, 90, 160, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1001;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-main-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(44, 90, 160, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-icon {
+  color: white;
+  font-size: 28px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-main-button:hover .contact-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.contact-widget:hover .contact-links {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.contact-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.contact-link:hover::before {
+  transform: translateX(100%);
+}
+
+.contact-link.twitter {
+  background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+}
+
+.contact-link.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.contact-link.linkedin {
+  background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.contact-link.email {
+  background: linear-gradient(135deg, #ea4335, #d33b2c);
+}
+
+.contact-link:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-link svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover svg {
+  transform: scale(1.2);
+}
+
+/* Staggered animation for contact links */
+.contact-widget:hover .contact-link:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.contact-widget:hover .contact-link:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.contact-widget:hover .contact-link:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.contact-widget:hover .contact-link:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Responsive Contact Widget */
+@media screen and (max-width: 768px) {
+  .contact-widget {
+    bottom: 15px;
+    right: 15px;
+    position: fixed !important;
+  }
+
+  .contact-main-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-icon {
+    font-size: 24px;
+  }
+
+  .contact-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contact-links {
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-widget {
+    bottom: 10px;
+    right: 10px;
+    position: fixed !important;
+    z-index: 1000 !important;
+  }
+
+  .contact-main-button {
+    width: 55px;
+    height: 55px;
+    border-width: 2px;
+  }
+
+  .contact-icon {
+    font-size: 22px;
+  }
+
+  .contact-link {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .contact-links {
+    gap: 6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .contact-widget {
+    bottom: 8px;
+    right: 8px;
+    position: fixed !important;
+    z-index: 1000 !important;
+  }
+
+  .contact-main-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-icon {
+    font-size: 20px;
+  }
+
+  .contact-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .contact-link svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Landscape orientation adjustments for contact widget */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .contact-widget {
+    bottom: 8px;
+    right: 10px;
+    position: fixed !important;
+  }
+
+  .contact-main-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .contact-icon {
+    font-size: 18px;
+  }
+
+  .contact-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-link svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-links {
+    gap: 5px;
+  }
+}
+
+/* Ensure widget stays in corner on all devices */
+@media screen and (max-width: 1024px) {
+  .contact-widget {
+    position: fixed !important;
+    bottom: 15px !important;
+    right: 15px !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .contact-main-button {
+    border: 3px solid white;
+  }
+
+  .contact-link {
+    border: 2px solid white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .contact-widget * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* Tablet Landscape (1024px and below) */
@@ -1414,8 +1704,7 @@ html {
 }
 
 /* High DPI Displays */
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-screen and (min-resolution: 192dpi) {
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .footer-heading {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -1432,5 +1721,9 @@ screen and (min-resolution: 192dpi) {
 
   .signup-button {
     display: none;
+  }
+
+  .contact-widget {
+    display: none !important;
   }
 }
