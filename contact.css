@@ -307,17 +307,35 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.whatsapp-section {
-    background: #25d366;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: center;
+/* Social Medias */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
 }
 
-.whatsapp-section h3 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
+.fa-whatsapp {
+    color: rgb(13, 243, 13);
+    font-size: 2rem;
+}
+
+.fa-linkedin {
+    color: rgb(0, 183, 255);
+    font-size: 2rem;
+}
+
+.fa-envelope {
+    color: black;
+    font-size: 2rem;
+}
+
+/* X (Twitter) SVG specific styling */
+.social-icon svg {
+    width: 32px;
+    height: 32px;
+    margin-top: 12%;
 }
 
 .company-details h3 {
