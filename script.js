@@ -126,3 +126,18 @@ document.querySelector('#consultation-infoBtn').addEventListener('click', (e) =>
     window.open('consult.html', '_self');
 });
 
+
+//todo: Social media access -
+const socialMediaLinks = [
+    'https://x.com/CiriUAE',
+    'https://wa.me/0971524308085',
+    'https://www.linkedin.com/company/ciri-uae',
+    'mailto:INQUIRY@CIRIUAE.COM'
+];
+
+document.querySelectorAll('.contact-links a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(socialMediaLinks[idx], '_self');
+    }, false);
+});
