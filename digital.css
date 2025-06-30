@@ -11,7 +11,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-    background-color: white;
+    background-color: #fff;
     color: black;
     padding: 0 2rem;
     position: fixed;
@@ -31,10 +31,17 @@ body {
     height: 70px;
 }
 
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1%;
+}
+
 /* Logo Styles */
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 35px;
     border-radius: 15px;
     margin-right: 2rem;
 }
@@ -42,6 +49,14 @@ body {
 .logo:hover {
     color: #ddd;
     transition: color 0.3s ease;
+}
+
+.logo-text {
+    font-size: 15px;
+    margin-bottom: 10%;
+    margin-left: 1%;
+    font-weight: 600;
+    color: black;
 }
 
 /* Navigation Links */
@@ -73,7 +88,7 @@ body {
 
 /* Underline Animation */
 .nav-links a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -174,16 +189,15 @@ body {
     }
 
     .navbar {
-        padding: 0 1rem;
+        padding: 3px 20px;
     }
 
     .nav-container {
-        height: 65px;
+        height: 40px;
     }
 
-    .logo {
-        font-size: 1.5rem;
-        margin-right: 1rem;
+    .nav-logo {
+        margin-top: 5%;
     }
 
     body {
@@ -200,11 +214,11 @@ body {
 
 @media screen and (max-width: 480px) {
     .navbar {
-        padding: 0 0.5rem;
+        padding: 15px 20px;
     }
 
-    .logo {
-        font-size: 1.3rem;
+    .nav-logo {
+        margin-top: 5%;
     }
 
     .mobile-menu {
@@ -220,6 +234,14 @@ body {
 
 /* Landscape orientation adjustments */
 @media screen and (max-height: 500px) and (orientation: landscape) {
+    .navbar {
+        padding: 20px 20px;
+    }
+
+    .nav-logo {
+        margin-bottom: 3%;
+    }
+
     .mobile-menu {
         border-radius: 0 0 50% 50%;
         padding: 4rem;
