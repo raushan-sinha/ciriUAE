@@ -190,16 +190,15 @@ body {
   }
 
   .navbar {
-    padding: 0 1rem;
+    padding: 10px 20px;
   }
 
   .nav-container {
     height: 40px;
   }
 
-  .logo {
-    font-size: 1.5rem;
-    margin-right: 1rem;
+  .nav-logo {
+    margin-top: 5%;
   }
 
   body {
@@ -216,11 +215,11 @@ body {
 
 @media screen and (max-width: 480px) {
   .navbar {
-    padding: 0 0.5rem;
+    padding: 5px 10px;
   }
 
-  .logo {
-    font-size: 1.3rem;
+  .nav-logo {
+    margin-top: 5%;
   }
 
   .mobile-menu {
@@ -236,6 +235,14 @@ body {
 
 /* Landscape orientation adjustments */
 @media screen and (max-height: 500px) and (orientation: landscape) {
+.navbar {
+  padding: 20px 20px;
+}
+
+.nav-logo {
+  margin-bottom: 3%;
+}
+
   .mobile-menu {
     border-radius: 0 0 50% 50%;
     padding: 4rem;
@@ -829,6 +836,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -840,6 +848,7 @@ body {
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -851,6 +860,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1001,6 +1011,7 @@ body {
 
 /* Portrait orientation for tablets */
 @media screen and (max-width: 768px) and (orientation: portrait) {
+
   .service-boxes-grid,
   .resource-cta-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1008,6 +1019,7 @@ body {
 }
 
 @media screen and (max-width: 480px) and (orientation: portrait) {
+
   .service-boxes-grid,
   .resource-cta-grid {
     grid-template-columns: 1fr;
@@ -1719,7 +1731,8 @@ html {
 }
 
 /* High DPI Displays */
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi) {
   .footer-heading {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
